@@ -1,0 +1,45 @@
+.header {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: white;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.time {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.date {
+  font-size: 14px;
+}
+
+.add-task-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px;
+  font-size: 44px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.task-container {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #cdcdcd;
+}
+
+.no-tasks {
+  padding: 10px;
+  font-size: 14px;
+  color: rgb(70, 69, 69);
+  text-align: center;
+}
