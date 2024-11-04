@@ -43,8 +43,8 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 
 3. stalar o NodeJs:
   ```bash
-(https://nodejs.org/en/download/)
-```
+  (https://nodejs.org/en/download/)
+  ```
 
 5. Instalar a Angular CLI: 
    ```bash
@@ -59,14 +59,14 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 
  ```bash
 
-  "styles": [
-    "node_modules/bootstrap/scss/bootstrap.scss",
-    "src/styles.scss"
-  ],
-  "scripts": [
-    "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-  ]
- ```
+     "styles": [
+       "node_modules/bootstrap/scss/bootstrap.scss",
+       "src/styles.scss"
+     ],
+     "scripts": [
+       "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+     ]
+    ```
   
 6. Inicie o servidor de desenvolvimento:
 
@@ -76,7 +76,7 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 
 7. Abra o navegador e acesse:
 
-   ```
+   ```bash
    http://localhost:4200
    ```
 
