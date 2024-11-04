@@ -29,6 +29,7 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 - 
 ## ⚙️ Configuração do Projeto
 
+
 1. Clone este repositório em sua máquina local:
 
    ```bash
@@ -41,40 +42,40 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
    cd todo-list-angular
    ```
 
-3. stalar o NodeJs:
-  ```bash
-  (https://nodejs.org/en/download/)
-  ```
+3. Instale o Node.js:
+   [Download do Node.js](https://nodejs.org/en/download/)
 
-5. Instalar a Angular CLI: 
+4. Instale a Angular CLI:
+
    ```bash
    npm i -g @angular/cli@16
    ```
-6. Instale as boodstrap no projeto:
+
+5. Instale o Bootstrap no projeto:
 
    ```bash
-   npm install boodstrap
+   npm install bootstrap
    ```
-7. No arquivo angular.json, adicionar a referência aos paths das bibliotecas instaladas:
 
- ```bash
+6. No arquivo `angular.json`, adicione a referência aos paths das bibliotecas instaladas:
 
-     "styles": [
-       "node_modules/bootstrap/scss/bootstrap.scss",
-       "src/styles.scss"
-     ],
-     "scripts": [
-       "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-     ]
-    ```
-  
-6. Inicie o servidor de desenvolvimento:
+   ```json
+   "styles": [
+     "node_modules/bootstrap/scss/bootstrap.scss",
+     "src/styles.scss"
+   ],
+   "scripts": [
+     "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+   ]
+   ```
+
+7. Inicie o servidor de desenvolvimento:
 
    ```bash
    npm start
    ```
 
-7. Abra o navegador e acesse:
+8. Abra o navegador e acesse:
 
    ```bash
    http://localhost:4200
