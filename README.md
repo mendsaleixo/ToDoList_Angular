@@ -98,4 +98,4 @@ A estrutura principal do projeto é composta pelos seguintes componentes e servi
 
 ## 👩‍💻 Desenvolvedores 
 
-Desenvolvido com 💚 por **Equipe 02**: Mandelson Aleixo, Maria Eduarda Castro, Larissa Rezende, Viviane Balbino, Yago Capistrano.
+Desenvolvido com 💚 por **Equipe 02**: Mendelson Aleixo, Maria Eduarda Castro, Larissa Rezende, Viviane Balbino, Yago Capistrano.
