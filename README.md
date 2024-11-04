@@ -52,10 +52,10 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
    npm i -g @angular/cli@16
    ```
 
-4. Instale dependencias do projeto:
+4. Instale as dependencias do projeto:
 
    ```bash
-   cd .\todo-list-angular
+   npm install
    ```
    
 6. Instale o Bootstrap no projeto:
