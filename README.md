@@ -42,18 +42,20 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
    ```
 
 3. stalar o NodeJs:
-  (https://nodejs.org/en/download/)
+  ```bash
+(https://nodejs.org/en/download/)
+```
 
-4. Instalar a Angular CLI: 
+5. Instalar a Angular CLI: 
    ```bash
    npm i -g @angular/cli@16
    ```
-5. Instale as boodstrap no projeto:
+6. Instale as boodstrap no projeto:
 
    ```bash
    npm install boodstrap
    ```
-6. No arquivo angular.json, adicionar a referência aos paths das bibliotecas instaladas:
+7. No arquivo angular.json, adicionar a referência aos paths das bibliotecas instaladas:
 
  ```bash
 
