@@ -39,8 +39,9 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 2. Entre na pasta do projeto:
 
    ```bash
-   cd todo-list-angular
+   cd .\todo-list-angular
    ```
+   
 
 3. Instale o Node.js:
    [Download do Node.js](https://nodejs.org/en/download/)
@@ -51,13 +52,19 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
    npm i -g @angular/cli@16
    ```
 
-5. Instale o Bootstrap no projeto:
+4. Instale dependencias do projeto:
+
+   ```bash
+   cd .\todo-list-angular
+   ```
+   
+6. Instale o Bootstrap no projeto:
 
    ```bash
    npm install bootstrap
    ```
 
-6. No arquivo `angular.json`, adicione a referência aos paths das bibliotecas instaladas:
+7. No arquivo `angular.json`, adicione a referência aos paths das bibliotecas instaladas:
 
    ```json
    "styles": [
@@ -69,16 +76,10 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
    ]
    ```
 
-7. Inicie o servidor de desenvolvimento:
+8. Inicie o servidor de desenvolvimento:
 
    ```bash
    npm start
-   ```
-
-8. Abra o navegador e acesse:
-
-   ```bash
-   http://localhost:4200
    ```
 
 ## 📝 Estrutura do Projeto
