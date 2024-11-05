@@ -1,0 +1,19 @@
+
+<div class="container topo">
+  <p class="d-inline ">Meu Dia</p>
+  <button class="add-task-button d-inline" (click)="addTask()">+</button>
+</div>
+
+<section class="task-container">
+  <app-task-form *ngIf="showTaskForm" (saveTask)="saveTask($event)" (cancel)="cancelTaskForm()"></app-task-form>
+  
+  <app-task *ngFor="let task of tasks; let i = index" 
+            [task]="task" 
+            (edit)="editTask(i)" 
+            (remove)="removeTask(i)">
+  </app-task>
+
+  <div *ngIf="tasks.length === 0" class="container no-tasks">
+    Ainda não há tarefas para este dia
+  </div>
+</section>

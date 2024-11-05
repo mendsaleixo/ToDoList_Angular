@@ -1,0 +1,31 @@
+<div class="task-form">
+  <h2>Nova Tarefa</h2>
+  <form (ngSubmit)="onSave()">
+    <label>
+      Título
+      <input type="text" [(ngModel)]="task.title" name="title" required />
+    </label>
+
+    <label>
+      Descrição
+      <input type="text" [(ngModel)]="task.category" name="category" />
+    </label>
+
+    <label>
+      Hora
+      <input type="time" [(ngModel)]="task.dueTime" name="dueTime" />
+    </label>
+
+    <label>
+      Importância
+      <select [(ngModel)]="task.importance" name="importance">
+        <option value="alta">Alta</option>
+        <option value="normal">Normal</option>
+        <option value="baixa">Baixa</option>
+      </select>
+    </label>
+
+    <button class="button" type="submit">Salvar</button>
+    <button class="button" type="button" (click)="onCancel()">Cancelar</button>
+  </form>
+</div>
