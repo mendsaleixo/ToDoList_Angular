@@ -29,6 +29,7 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 - 
 ## ⚙️ Configuração do Projeto
 
+
 1. Clone este repositório em sua máquina local:
 
    ```bash
@@ -38,28 +39,47 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 2. Entre na pasta do projeto:
 
    ```bash
-   cd todo-list-angular
+   cd .\todo-list-angular
    ```
+   
 
-3. Instale as dependências do projeto:
+3. Instale o Node.js:
+   [Download do Node.js](https://nodejs.org/en/download/)
+
+4. Instale a Angular CLI:
 
    ```bash
-   npm install boodstrap
+   npm i -g @angular/cli@16
    ```
-4. Inicie o servidor de desenvolvimento:
+
+4. Instale as dependencias do projeto:
 
    ```bash
-   npx ng serve
+   npm install
    ```
-   ou
+   
+6. Instale o Bootstrap no projeto:
+
+   ```bash
+   npm install bootstrap
+   ```
+
+7. No arquivo `angular.json`, adicione a referência aos paths das bibliotecas instaladas:
+
+   ```json
+   "styles": [
+     "node_modules/bootstrap/scss/bootstrap.scss",
+     "src/styles.scss"
+   ],
+   "scripts": [
+     "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+   ]
+   ```
+
+8. Inicie o servidor de desenvolvimento:
+
    ```bash
    npm start
-   ```
-
-6. Abra o navegador e acesse:
-
-   ```
-   http://localhost:4200
    ```
 
 ## 📝 Estrutura do Projeto
@@ -78,4 +98,4 @@ A estrutura principal do projeto é composta pelos seguintes componentes e servi
 
 ## 👩‍💻 Desenvolvedores 
 
-Desenvolvido com 💚 por **Equipe 02**: Mandelson Aleixo, Maria Eduarda Castro, Larissa Rezende, Viviane Balbino, Yago Capistrano.
+Desenvolvido com 💚 por **Equipe 02**: Mendelson Aleixo, Maria Eduarda Castro, Larissa Rezende, Viviane Balbino, Yago Capistrano.
