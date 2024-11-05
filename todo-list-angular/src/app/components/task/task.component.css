@@ -1,0 +1,42 @@
+.task {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding:  20px;
+  color: black;
+  height: 30px;
+  margin: 20px auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  gap: 10px;  
+  
+}
+
+.task-title {
+  font-weight: bold;
+}
+
+.task-category, .task-time {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.edit-button, .delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.alta {
+  border-left: 20px solid red;
+}
+
+.normal {
+  border-left: 20px solid orange;
+}
+
+.baixa {
+  border-left: 20px solid green;
+}

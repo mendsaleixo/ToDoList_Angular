@@ -1,0 +1,38 @@
+.task-form {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  
+  max-width: 80%;
+  margin: 30px auto;
+  color: black;
+}
+
+.task-form h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.task-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.task-form input, .task-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.task-form button {
+  margin-top: 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.825); /* Cor de fundo ao passar o mouse (vermelho semi-transparente) */
+  color: rgb(255, 255, 255); /* Cor do texto ao passar o mouse */
+  border: none;
+}

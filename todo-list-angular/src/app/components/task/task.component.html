@@ -1,0 +1,7 @@
+<div class="task" [ngClass]="task.importance">
+  <span class="task-title">{{ task.title }}</span>
+  <span class="task-category">{{ task.category }}</span>
+  <span class="task-time">{{ task.dueTime }}</span>
+  <button class="edit-button" (click)="edit.emit()">✏️</button>
+  <button class="delete-button" (click)="remove.emit()">🗑️</button>
+</div>

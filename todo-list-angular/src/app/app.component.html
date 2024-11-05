@@ -1,14 +1,5 @@
+<!-- app.component.html -->
 <div class="app-container">
-  <div class="header">
-    <h1 class="title">{{ title }}</h1>
-    <p class="time">{{ currentHour }}</p>
-    <p class="date">{{ currentDate }}</p>
-    <button class="add-task-button" (click)="addTask()">+</button>
-  </div>
-
-  <section class="task-container">
-    <div *ngIf="tasks.length === 0" class="no-tasks">
-      Ainda não há tarefas para este dia
-    </div>
-  </section>
+  <app-header></app-header>
+  <app-todo-list></app-todo-list>
 </div>
