@@ -4,9 +4,14 @@
 </div>
 
 <section class="task-container">
-  <app-task-form *ngIf="showTaskForm"
-                 [task]="taskToEdit"  
-                 (saveTask)="saveTask($event)" 
+  <app-task-form *ngIf="showTaskForm && taskToEdit"
+                 [task]="taskToEdit"
+                 (saveTask)="saveTask($event)"
+                 (cancel)="cancelTaskForm()">
+  </app-task-form>
+
+  <app-task-form *ngIf="showTaskForm && !taskToEdit"
+                 (saveTask)="saveTask($event)"
                  (cancel)="cancelTaskForm()">
   </app-task-form>
   

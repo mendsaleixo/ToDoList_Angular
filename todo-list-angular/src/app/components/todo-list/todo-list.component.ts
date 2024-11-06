@@ -25,6 +25,7 @@ export class TodoListComponent implements OnInit {
 
  
   addTask(): void {
+    debugger
     this.showTaskForm = true;
     this.taskToEdit = null; 
   }
@@ -40,8 +41,8 @@ export class TodoListComponent implements OnInit {
         this.taskToEdit = null; 
       });
     } else {
-           this.taskService.addTask(task).subscribe(() => {
-            console.log(this.loadTasks())
+      debugger
+        this.taskService.addTask(task).subscribe(() => {
         this.loadTasks(); 
         this.showTaskForm = false;
       });
