@@ -1,5 +1,4 @@
-
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-task-form',
@@ -7,27 +6,15 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./task-form.component.css']
 })
 export class TaskFormComponent {
+  @Input() task = { title: '', category: '', dueTime: '', importance: 'normal' };
   @Output() saveTask = new EventEmitter<any>();
   @Output() cancel = new EventEmitter<void>();
 
-  task = {
-    title: '',
-    category: '',
-    dueTime: '',
-    importance: '' // Pode ser 'alta', 'normal', 'baixa'
-  };
-
-  onSave() {
+  onSave(): void {
     this.saveTask.emit(this.task);
-    this.resetForm();
   }
 
-  onCancel() {
+  onCancel(): void {
     this.cancel.emit();
-    this.resetForm();
-  }
-
-  resetForm() {
-    this.task = { title: '', category: '', dueTime: '', importance: 'normal' };
   }
 }

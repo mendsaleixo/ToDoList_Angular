@@ -1,63 +1,61 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Task {
-  title: string;
-  completed: boolean;
-  // Adicione outras propriedades conforme necessário
-}
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css']
 })
-
 export class TodoListComponent implements OnInit {
-  tasks: Task[] = [];
+  tasks: any[] = [];
   showTaskForm = false;
-  currentDate: string = new Date().toLocaleDateString();
-  editingIndex: number | null = null;
+  taskToEdit: any = null;
+
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
-    this.updateCurrentDate();
-    setInterval(() => this.updateCurrentDate(), 60000);
+    this.loadTasks();
   }
 
-  updateCurrentDate(): void {
-    this.currentDate = new Date().toLocaleString();
+  loadTasks(): void {
+    this.taskService.getTasks().subscribe(tasks => {
+      this.tasks = tasks;
+    });
   }
 
-  addTask() {
+  addTask(): void {
     this.showTaskForm = true;
-    this.editingIndex = null;
+    this.taskToEdit = null;
   }
 
-  saveTask(newTask: Task) { 
-    if (!newTask.title.trim()) { // Verifica se o título está vazio
-      alert("O título da tarefa não pode estar vazio.");
-      return;
-    }
-    
-    if (this.editingIndex !== null) {
-      this.tasks[this.editingIndex] = newTask;
-      this.editingIndex = null;
+  saveTask(task: any): void {
+    if (this.taskToEdit) {
+      this.taskService.updateTask(this.taskToEdit._id, task).subscribe(() => {
+        this.loadTasks();  
+        this.showTaskForm = false;
+      });
     } else {
-      this.tasks.push(newTask);
+      this.taskService.addTask(task).subscribe(() => {
+        this.loadTasks();  
+        this.showTaskForm = false;
+      });
     }
-    this.showTaskForm = false;
   }
 
-  cancelTaskForm() {
-    this.showTaskForm = false;
-    this.editingIndex = null;
-  }
-
-  editTask(index: number) {
+  editTask(index: number): void {
+    this.taskToEdit = { ...this.tasks[index] };
     this.showTaskForm = true;
-    this.editingIndex = index;
   }
 
-  removeTask(index: number) {
-    this.tasks.splice(index, 1);
+  removeTask(index: number): void {
+    const taskId = this.tasks[index]._id;
+    this.taskService.deleteTask(taskId).subscribe(() => {
+      this.loadTasks();  // Recarregar as tarefas
+    });
+  }
+
+  cancelTaskForm(): void {
+    this.showTaskForm = false;
+    this.taskToEdit = null;
   }
 }
