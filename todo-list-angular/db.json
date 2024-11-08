@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Tarefa 1",
+      "category": "Trabalho",
+      "dueTime": "09:00",
+      "importance": "alta"
+    },
+    {
+      "id": "2",
+      "title": "Tarefa 2",
+      "category": "Casa",
+      "dueTime": "12:00",
+      "importance": "normal"
+    },
+    {
+      "id": "43a2",
+      "title": "teste",
+      "category": "teste",
+      "dueTime": "23:28",
+      "importance": "normal"
+    }
+  ]
+}
