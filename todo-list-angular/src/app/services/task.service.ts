@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'https://crudcrud.com/api/d7e8ea3f6e62485ab8e27971468ac4ab/tasks'; 
+  private apiUrl = 'https://crudcrud.com/api/a63d129b368948edbafe742f7b8abb60/tasks'; 
 
   constructor(private http: HttpClient) {}
 
