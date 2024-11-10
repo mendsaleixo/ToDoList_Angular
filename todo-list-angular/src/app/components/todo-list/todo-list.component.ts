@@ -55,6 +55,18 @@ export class TodoListComponent implements OnInit {
     this.showTaskForm = true; 
   }
 
+  completeTask(index: number): void {
+    const task = this.tasks[index];
+    task.completed = !task.completed;
+    
+    console.log('Objeto da tarefa antes do envio:', task);
+
+    this.taskService.completeTask(task._id, task).subscribe(() => {
+        this.loadTasks();
+    });
+}
+
+
   
   removeTask(index: number): void {
     const taskId = this.tasks[index]._id;
@@ -62,10 +74,12 @@ export class TodoListComponent implements OnInit {
       this.loadTasks();  
     });
   }
+  
 
   
   cancelTaskForm(): void {
     this.showTaskForm = false;
     this.taskToEdit = null; 
   }
+  
 }

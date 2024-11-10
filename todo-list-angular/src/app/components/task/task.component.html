@@ -8,8 +8,6 @@
   <div class="task-actions">
     <button class="edit-button" (click)="edit.emit()">✏️</button>
     <button class="delete-button" (click)="remove.emit()">🗑️</button>
-
-    <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-    <label class="btn btn-outline-primary" for="btn-check-outlined" (click)="complete.emit()">Concluido</label><br>
+    <input type="checkbox"(change)="complete.emit()" />
   </div>
 </div>
