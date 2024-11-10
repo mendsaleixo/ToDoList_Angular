@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'https://crudcrud.com/api/fc105ba4a7e449fe9fb60f8f5c4da8c3/tasks'; 
+  private apiUrl = 'https://crudcrud.com/api/1eb26918daab41f9af1f91711103811f/tasks'; 
 
   constructor(private http: HttpClient) {}
 
@@ -25,5 +25,8 @@ export class TaskService {
 
   deleteTask(id: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
+  }
+  completeTask(id: string): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, { completed: true });
   }
 }

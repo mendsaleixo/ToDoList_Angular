@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges } from
   styleUrls: ['./task-form.component.css']
 })
 export class TaskFormComponent implements OnChanges {
-  @Input() task: any = {title: '', category: '', dueTime: '', importance: 'normal' };
+  @Input() task: any = {title: '', category: '', dueTime: '', importance: 'normal', completed: false};
   @Output() saveTask = new EventEmitter<any>();
   @Output() cancel = new EventEmitter<void>();
 
