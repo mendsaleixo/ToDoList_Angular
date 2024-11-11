@@ -10,7 +10,7 @@ export class TaskFormComponent implements OnChanges {
   @Output() saveTask = new EventEmitter<any>();
   @Output() cancel = new EventEmitter<void>();
 
-  // Limite de caracteres para título e descrição
+  
   titleMaxLength = 50;
   categoryMaxLength = 100;
 
@@ -26,8 +26,7 @@ export class TaskFormComponent implements OnChanges {
     }
   }
 
-  // Contagem de caracteres restantes para título e descrição
-  get titleCharsLeft() {
+ get titleCharsLeft() {
     return this.titleMaxLength - (this.task.title?.length || 0);
   }
 
