@@ -76,7 +76,13 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
    ]
    ```
 
-8. Inicie o servidor de desenvolvimento:
+8. Inicie o servidor de API (necessário para gerenciar as tarefas):
+
+   ```bash
+   npm run server
+   ```
+   
+9. Inicie o servidor de desenvolvimento do Angular:
 
    ```bash
    npm start
