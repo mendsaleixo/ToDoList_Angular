@@ -1,12 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": "424f",
-      "title": "teste",
-      "category": "teste",
-      "dueTime": "08:00",
-      "importance": "normal",
-      "completed": false
-    }
-  ]
+  "tasks": []
 }
