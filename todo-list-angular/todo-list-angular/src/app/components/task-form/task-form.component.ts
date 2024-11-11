@@ -10,10 +10,7 @@ export class TaskFormComponent implements OnChanges {
   @Output() saveTask = new EventEmitter<any>();
   @Output() cancel = new EventEmitter<void>();
 
-  // Limite de caracteres para título e descrição
-  titleMaxLength = 50;
-  categoryMaxLength = 100;
-
+  
   errorMessages = {
     title: '',
     category: '',
@@ -21,37 +18,24 @@ export class TaskFormComponent implements OnChanges {
   };
 
   ngOnChanges(changes: SimpleChanges): void {
+   
     if (changes['task'] && changes['task'].currentValue) {
       this.task = { ...changes['task'].currentValue }; 
     }
   }
 
-  // Contagem de caracteres restantes para título e descrição
-  get titleCharsLeft() {
-    return this.titleMaxLength - (this.task.title?.length || 0);
-  }
-
-  get categoryCharsLeft() {
-    return this.categoryMaxLength - (this.task.category?.length || 0);
-  }
-
   onSave(): void {
-    this.errorMessages = { title: '', category: '', dueTime: '' };
-    let isValid = true;
+      this.errorMessages = { title: '', category: '', dueTime: '' };
+
+     let isValid = true;
 
     if (!this.task.title.trim()) {
       this.errorMessages.title = 'O título é obrigatório';
-      isValid = false;
-    } else if (this.task.title.length > this.titleMaxLength) {
-      this.errorMessages.title = `O título não pode exceder ${this.titleMaxLength} caracteres`;
       isValid = false;
     }
 
     if (!this.task.category.trim()) {
       this.errorMessages.category = 'A descrição é obrigatória';
-      isValid = false;
-    } else if (this.task.category.length > this.categoryMaxLength) {
-      this.errorMessages.category = `A descrição não pode exceder ${this.categoryMaxLength} caracteres`;
       isValid = false;
     }
 
@@ -69,4 +53,3 @@ export class TaskFormComponent implements OnChanges {
     this.cancel.emit();
   }
 }
-

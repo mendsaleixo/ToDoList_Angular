@@ -3,20 +3,39 @@
   <form (ngSubmit)="onSave()">
     <label>
       Título
-      <input type="text" [(ngModel)]="task.title" name="title" required />
-      <div *ngIf="errorMessages.title" class="error-message">{{ errorMessages.title }}</div> <!-- Exibe erro -->
+      <input
+        type="text"
+        [(ngModel)]="task.title"
+        name="title"
+        maxlength="{{ titleMaxLength }}"
+        required
+      />
+      <small>{{ titleCharsLeft }} caracteres restantes</small>
+      <div *ngIf="errorMessages.title" class="error-message">
+        {{ errorMessages.title }}
+      </div>
     </label>
 
     <label>
       Descrição
-      <input type="text" [(ngModel)]="task.category" name="category" />
-      <div *ngIf="errorMessages.category" class="error-message">{{ errorMessages.category }}</div> <!-- Exibe erro -->
+      <input
+        type="text"
+        [(ngModel)]="task.category"
+        name="category"
+        maxlength="{{ categoryMaxLength }}"
+      />
+      <small>{{ categoryCharsLeft }} caracteres restantes</small>
+      <div *ngIf="errorMessages.category" class="error-message">
+        {{ errorMessages.category }}
+      </div>
     </label>
 
     <label>
       Hora
       <input type="time" [(ngModel)]="task.dueTime" name="dueTime" />
-      <div *ngIf="errorMessages.dueTime" class="error-message">{{ errorMessages.dueTime }}</div> <!-- Exibe erro -->
+      <div *ngIf="errorMessages.dueTime" class="error-message">
+        {{ errorMessages.dueTime }}
+      </div>
     </label>
 
     <label>
@@ -32,3 +51,4 @@
     <button class="button" type="button" (click)="onCancel()">Cancelar</button>
   </form>
 </div>
+

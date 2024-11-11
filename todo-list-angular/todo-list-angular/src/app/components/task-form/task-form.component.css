@@ -2,6 +2,7 @@
   background: white;
   padding: 20px;
   border-radius: 5px;
+  
   max-width: 80%;
   margin: 30px auto;
   color: black;
@@ -17,8 +18,7 @@
   margin-top: 10px;
 }
 
-.task-form input,
-.task-form select {
+.task-form input, .task-form select {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
@@ -32,8 +32,8 @@
 }
 
 .button:hover {
-  background-color: rgba(0, 0, 0, 0.825);
-  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.825); /* Cor de fundo ao passar o mouse (vermelho semi-transparente) */
+  color: rgb(255, 255, 255); /* Cor do texto ao passar o mouse */
   border: none;
 }
 
@@ -41,12 +41,4 @@
   color: red;
   font-size: 0.8rem;
   margin-top: 5px;
-}
-
-/* Estilo para a contagem de caracteres */
-.task-form small {
-  display: block;
-  margin-top: 5px;
-  font-size: 0.8rem;
-  color: gray;
 }
