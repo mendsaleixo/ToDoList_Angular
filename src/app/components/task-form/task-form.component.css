@@ -1,0 +1,52 @@
+.task-form {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 80%;
+  margin: 30px auto;
+  color: black;
+}
+
+.task-form h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.task-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.task-form input,
+.task-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.task-form button {
+  margin-top: 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.825);
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+/* Estilo para a contagem de caracteres */
+.task-form small {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: gray;
+}

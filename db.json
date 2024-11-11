@@ -1,0 +1,20 @@
+{
+  "tasks": [
+    {
+      "id": "9ffa",
+      "title": "Alo ",
+      "category": "caminhar",
+      "dueTime": "00:06",
+      "importance": "alta",
+      "completed": true
+    },
+    {
+      "id": "d8ce",
+      "title": "Viajar",
+      "category": "caminhar",
+      "dueTime": "06:12",
+      "importance": "alta",
+      "completed": true
+    }
+  ]
+}

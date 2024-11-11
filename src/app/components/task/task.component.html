@@ -1,0 +1,15 @@
+<div class="task" [ngClass]="task.importance">
+    <div class="task-color-bar"></div>
+    <div class="task-content">
+      <span class="task-title">{{ task.title | slice:0:80 }}{{ task.title.length > 80 ? '...' : '' }}</span>
+      <span class="task-category">{{ task.category | slice:0:200 }}{{ task.category.length > 200 ? '...' : '' }}</span>
+      <span class="task-time">{{ task.dueTime }}</span>
+    </div>
+    <div class="task-actions">
+      <button class="edit-button" (click)="edit.emit()">✏️</button>
+      <button class="delete-button" (click)="remove.emit()">🗑️</button>
+      <input type="checkbox" [checked]="task.completed" (change)="complete.emit()" />
+    </div>
+
+  </div>
+  
