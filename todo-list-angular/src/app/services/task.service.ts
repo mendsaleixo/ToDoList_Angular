@@ -6,28 +6,32 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'https://crudcrud.com/api/6ea75e758eb84a3d80771d7f9c4c85a1/tasks'; 
+  private apiUrl = 'http://localhost:3000/tasks';
 
   constructor(private http: HttpClient) {}
-
 
   getTasks(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
 
+  getTaskById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  }
+
   addTask(task: any): Observable<any> {
-    return this.http.post(this.apiUrl, task);
+    return this.http.post<any>(this.apiUrl, task);
   }
 
-  updateTask(id: string, task: any): Observable<any> {
+  updateTask(id: number, task: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, task);
+  }
+
+  completeTask(id: string, task: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, task);
-  }
-
-  deleteTask(id: string): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${id}`);
-  }
-  completeTask(taskId: string, task: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${taskId}`, task);
 }
+
+  deleteTask(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
+  }
 
 }

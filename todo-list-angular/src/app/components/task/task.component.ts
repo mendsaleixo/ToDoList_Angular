@@ -11,5 +11,4 @@ export class TaskComponent {
   @Output() edit = new EventEmitter<void>();
   @Output() remove = new EventEmitter<void>();
   @Output() complete = new EventEmitter<void>();
-  
 }

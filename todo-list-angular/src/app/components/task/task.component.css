@@ -10,11 +10,13 @@
   border-radius: 10px;
   background-color: white;
   color: black;
+  margin-bottom: 10px;
 }
 
 .task-color-bar {
   width: 10px;
   border-radius: 10px 0 0 10px;
+  
 }
 
 .alta .task-color-bar {
