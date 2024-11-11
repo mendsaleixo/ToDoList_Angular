@@ -1,6 +1,6 @@
 // local-storage.service.ts
 import { Injectable } from '@angular/core';
-import { Todo } from '../models/todo.model';
+import { Task } from '../models/todo.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +8,11 @@ import { Todo } from '../models/todo.model';
 export class LocalStorageService {
   private storageKey = 'todos';
 
-  getTodos(): Todo[] {
+  getTodos(): Task[] {
     return JSON.parse(localStorage.getItem(this.storageKey) || '[]');
   }
 
-  saveTodos(todos: Todo[]): void {
+  saveTodos(todos: Task[]): void {
     localStorage.setItem(this.storageKey, JSON.stringify(todos));
   }
 }

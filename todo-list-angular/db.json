@@ -6,7 +6,7 @@
       "category": "caminhar",
       "dueTime": "00:06",
       "importance": "alta",
-      "completed": false
+      "completed": true
     },
     {
       "id": "d8ce",
@@ -14,6 +14,22 @@
       "category": "caminhar",
       "dueTime": "06:12",
       "importance": "alta",
+      "completed": true
+    },
+    {
+      "id": "e5b1",
+      "title": "dirlandia",
+      "category": "macaca",
+      "dueTime": "22:39",
+      "importance": "baixa",
+      "completed": true
+    },
+    {
+      "id": "a9d8",
+      "title": "treinoperebas",
+      "category": "caminhar",
+      "dueTime": "00:49",
+      "importance": "normal",
       "completed": true
     }
   ]

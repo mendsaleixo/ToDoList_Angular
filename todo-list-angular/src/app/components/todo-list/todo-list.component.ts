@@ -65,10 +65,12 @@ export class TodoListComponent implements OnInit {
       this.loadTasks();  
     });
   }
+  
 
 
   cancelTaskForm(): void {
     this.showTaskForm = false;
     this.taskToEdit = null;
   }
+  
 }
