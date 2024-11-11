@@ -18,7 +18,8 @@
   <app-task *ngFor="let task of tasks; let i = index" 
             [task]="task" 
             (edit)="editTask(i)" 
-            (remove)="removeTask(i)">
+            (remove)="removeTask(i)"
+            (complete)="completeTask(i)">
   </app-task>
 
   <div *ngIf="tasks.length === 0" class="container no-tasks">

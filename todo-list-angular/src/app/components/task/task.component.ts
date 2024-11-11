@@ -10,4 +10,5 @@ export class TaskComponent {
   @Input() task: any;
   @Output() edit = new EventEmitter<void>();
   @Output() remove = new EventEmitter<void>();
+  @Output() complete = new EventEmitter<void>();
 }

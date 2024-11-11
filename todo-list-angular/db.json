@@ -1,25 +1,20 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "title": "Tarefa 1",
-      "category": "Trabalho",
-      "dueTime": "09:00",
-      "importance": "alta"
+      "id": "9ffa",
+      "title": "Alo ",
+      "category": "caminhar",
+      "dueTime": "00:06",
+      "importance": "alta",
+      "completed": false
     },
     {
-      "id": "2",
-      "title": "Tarefa 2",
-      "category": "Casa",
-      "dueTime": "12:00",
-      "importance": "normal"
-    },
-    {
-      "id": "43a2",
-      "title": "teste",
-      "category": "teste",
-      "dueTime": "23:28",
-      "importance": "normal"
+      "id": "d8ce",
+      "title": "Viajar",
+      "category": "caminhar",
+      "dueTime": "06:12",
+      "importance": "alta",
+      "completed": true
     }
   ]
 }
